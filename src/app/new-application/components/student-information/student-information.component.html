@@ -1,0 +1,64 @@
+<div class="bg-white mt-2 border-2 rounded-sm p-5">
+  <form [formGroup]="student_information" (ngSubmit)="onSubmit()" class="grid grid-cols-1 gap-x-5 gap-y-4 my-5 rounded">
+    <div class="">
+      <label class="block mb-1 font-semibold" for="student_name">Student Full Name:</label>
+      <input required formControlName="student_name" class="form-input px-4 py-2 w-full rounded-sm" type="text" name="student_name" id="student_name">
+    </div>
+
+    <div class="">
+      <label class="block mb-1 font-semibold" for="student_email">Student Email:</label>
+      <input required formControlName="student_email" class="form-input px-4 py-2 w-full rounded-sm" type="email" name="student_email" id="student_email">
+    </div>
+
+    <div class="">
+      <label class="block mb-1 font-semibold" for="student_number">Student Phone Number:</label>
+      <input required formControlName="student_number" class="form-input px-4 py-2 w-full rounded-sm" type="tel" name="student_number" id="student_number">
+    </div>
+
+    <div class="">
+      <label class="block mb-1 font-semibold" for="student_dob">Student Date of Birth:</label>
+      <input required formControlName="student_dob" class="form-input px-4 py-2 w-full rounded-sm" type="date" name="student_dob" id="student_dob">
+    </div>
+
+    <div class="">
+      <label class="block mb-1 font-semibold" for="visa_refusal">Student has any Visa Refusal:
+      </label>
+      <select required formControlName="visa_refusal" class=" form-input px-4 py-2 w-full rounded-sm" name="visa_refusal" id="visa_refusal">
+        <option value="0">No</option>
+        <option value="1">Yes</option>
+      </select>
+    </div>
+    
+    <div class="">
+      <label class="block mb-1 font-semibold" for="passport_number">Passport Number:</label>
+      <input required formControlName="passport_number" class="form-input px-4 py-2 w-full rounded-sm" type="text" name="passport_number" id="passport_number">
+    </div>
+
+    <div class="">
+      <label class="block mb-1 font-semibold" for="passport_expire_date">Passport Expire Date: </label>
+      <input required formControlName="passport_expire_date" class="form-input px-4 py-2 w-full rounded-sm" type="date" name="passport_expire_date" id="passport_expire_date">
+    </div>
+
+    <div class="">
+      <label class="block mb-1 font-semibold" for="text">Nationality:
+      </label>
+      <select required formControlName="nationality" class=" form-input px-4 py-2 w-full rounded-sm" name="text" id="text">
+        <option value="Bangladesh">Bangladesh</option>
+        <option value="India">India</option>
+        <option value="Pakistan">Pakistan</option>
+        <option value="Morocco">Morocco</option>
+      </select>
+    </div>
+
+    <div class="justify-self-end flex gap-4">
+      <button class="self-center bg-blue-900 text-white rounded-sm p-2" type="submit">
+        Apply
+        <svg xmlns="http://www.w3.org/2000/svg" class="inline ml-2 h-6 w-6" fill="none" viewBox="0 0 24 24"
+          stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M13 9l3 3m0 0l-3 3m3-3H8m13 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
+      </button>
+    </div>
+  </form>
+</div>

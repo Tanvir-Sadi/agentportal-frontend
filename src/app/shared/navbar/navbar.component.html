@@ -1,0 +1,12 @@
+<div class="sticky top-0 bg-white z-50 w-100 py-5 border-b-2 px-5">
+    <div class="flex justify-between">
+        <img routerLink="/" class="h-10" src="assets\img\H&H logo.png" alt="">
+        <ul class="self-center flex gap-5">
+            <li *ngIf="!loggedin"><a class="font-semibold hover:border-b-2 pb-1 hover:border-blue-900 hover:text-blue-900" routerLink="/auth/login">Login</a></li>
+            <li *ngIf="!loggedin"><a class="font-semibold hover:border-b-2 pb-1 hover:border-blue-900 hover:text-blue-900" routerLink="/auth/register">Register</a></li>
+            <li *ngIf="roles == 'admin'"><a class="font-semibold hover:border-b-2 pb-1 hover:border-blue-900 hover:text-blue-900" routerLink="/admin/application">Dashboard</a></li>
+            <li *ngIf="roles == 'agent'"><a class="font-semibold hover:border-b-2 pb-1 hover:border-blue-900 hover:text-blue-900" routerLink="/agent/new-application">Dashboard</a></li>
+            <li *ngIf="loggedin"><a (click)="logout()" class="hover:cursor-pointer font-semibold hover:border-b-2 pb-1 hover:border-blue-900 hover:text-blue-900" >Logout</a></li>
+        </ul>
+    </div>
+</div>

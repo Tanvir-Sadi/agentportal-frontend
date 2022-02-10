@@ -1,0 +1,32 @@
+<!-- <app-application-status></app-application-status> -->
+<div class="flex gap-x-5 bg-white mt-10 border-2 rounded-sm pt-5 pb-1 px-5">
+    <button (click)="step(1)" [ngClass]="steps==1 ? 'border-blue-900' : 'border-gray-200'" class="border-b-4 px-3 pb-1 hover:cursor-pointer">
+        <h3 class="font-medium text-blue-900">Student Details</h3>
+    </button>
+
+    <button (click)="step(2)" [ngClass]="steps == 2 ? 'border-blue-900' : 'border-gray-200'" class="border-b-4 px-3 pb-1 hover:cursor-pointer">
+        <h3 class="font-medium text-blue-900">Course Details</h3>
+    </button>
+
+    <button (click)="step(3)" [ngClass]="steps == 3 ? 'border-blue-900' : 'border-gray-200'" class="border-b-4 px-3 pb-1 hover:cursor-pointer">
+        <h3 class="font-medium text-blue-900">Documents</h3>
+    </button>
+
+    <button (click)="step(4)" [ngClass]="steps == 4 ? 'border-blue-900' : 'border-gray-200'" class="border-b-4 px-3 pb-1 hover:cursor-pointer">
+        <h3 class="font-medium text-blue-900">Message</h3>
+    </button>
+
+</div>
+
+<div *ngIf="steps==1">
+    <app-student-details></app-student-details>
+</div>
+<div *ngIf="steps==2">
+    <app-course-details></app-course-details>
+</div>
+<div *ngIf="steps==3">
+    <app-document-details></app-document-details>
+</div>
+<div *ngIf="steps==4">
+    <app-messege-details></app-messege-details>
+</div>

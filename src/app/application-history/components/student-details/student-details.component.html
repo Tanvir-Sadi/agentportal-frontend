@@ -1,0 +1,42 @@
+<div class="bg-white mt-2 border-2 rounded-sm p-5">
+  <div class="grid grid-cols-4 gap-x-5 gap-y-4 my-5">
+    <p class="col-span-1 font-semibold">Application ID: </p>
+    <div *ngIf="loading" class="animate-pulse h-2 bg-slate-200 rounded-full col-span-3 mr-10"></div>
+    <p *ngIf="!loading" class="col-span-3">{{application?.application_id}}</p>
+
+    <p class="col-span-1 font-semibold"> Student Name: </p>
+    <div *ngIf="loading" class="animate-pulse h-2 bg-slate-200 rounded-full col-span-3 mr-10"></div>
+    <p *ngIf="!loading" class="col-span-3">{{application?.student_name}}</p>
+
+    <p class="col-span-1 font-semibold"> Student Email </p>
+    <div *ngIf="loading" class="animate-pulse h-2 bg-slate-200 rounded-full col-span-3 mr-10"></div>
+    <p *ngIf="!loading" class="col-span-3">{{application?.student_email}}</p>
+
+    <p class="col-span-1 font-semibold"> Student Phone Number: </p>
+    <div *ngIf="loading" class="animate-pulse h-2 bg-slate-200 rounded-full col-span-3 mr-10"></div>
+    <p *ngIf="!loading" class="col-span-3">{{application?.student_number}}</p>
+
+    <p class="col-span-1 font-semibold"> Date Of Birth: </p>
+    <div *ngIf="loading" class="animate-pulse h-2 bg-slate-200 rounded-full col-span-3 mr-10"></div>
+    <p *ngIf="!loading" class="col-span-3">{{application?.student_dob|date}}</p>
+
+    <p class="col-span-1 font-semibold">Student has any Visa Refusal:</p>
+    <div *ngIf="loading" class="animate-pulse h-2 bg-slate-200 rounded-full col-span-3 mr-10"></div>
+    <p *ngIf="!loading" class="col-span-3">{{application?.visa_refusal ? 'Yes':'No'}}</p>
+
+    <p class="col-span-1 font-semibold"> Passport Number: </p>
+    <div *ngIf="loading" class="animate-pulse h-2 bg-slate-200 rounded-full col-span-3 mr-10"></div>
+    <p *ngIf="!loading" class="col-span-3">{{application?.passport_number}}</p>
+
+    <p class="col-span-1 font-semibold"> Passport Expire Date: </p>
+    <div *ngIf="loading" class="animate-pulse h-2 bg-slate-200 rounded-full col-span-3 mr-10"></div>
+    <p *ngIf="!loading" class="col-span-3">{{application?.passport_expire_date|date}}</p>
+
+    <p class="col-span-1 font-semibold">Nationality: </p>
+    <div *ngIf="loading" class="animate-pulse h-2 bg-slate-200 rounded-full col-span-3 mr-10"></div>
+    <p *ngIf="!loading" class="col-span-3">{{application?.nationality}}</p>
+  </div>
+  <div *ngIf="roles=='admin'">
+    <button (click)="deleteApplication(application.id)" class="my-3 bg-red-500 px-2 py-3 text-center text-white font-semibold rounded-sm">Delete Application</button>
+  </div>
+</div>

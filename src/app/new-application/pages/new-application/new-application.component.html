@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="grid grid-cols-3 gap-x-12 bg-white mt-10 border-2 rounded-sm pt-5 px-5 pb-2">
+        <div [ngClass]="steps == 1 ? 'border-blue-900' : 'border-gray-200'" (click)="set_step(1)" class="hover:cursor-pointer border-b-4 pb-2">
+            <h3 class="font-medium text-blue-900">Step 1</h3>
+            <p class="text-sm">Course Informations</p>
+        </div>
+
+        <div [ngClass]="steps == 2 ? 'border-blue-900' : 'border-gray-200'" (click)="set_step(2)" class="hover:cursor-pointer border-b-4 pb-2">
+            <h3 class="font-medium text-blue-900">Step 2</h3>
+            <p class="text-sm">Student Informations</p>
+        </div>
+
+        <!-- <div [ngClass]="steps == 3 ? 'border-blue-900' : 'border-gray-200'" (click)="set_step(3)" class="border-b-4 pb-2">
+            <h3 class="font-medium text-blue-900">Step 3</h3>
+            <p class="text-sm">Document Upload</p>
+        </div> -->
+
+    </div>
+    
+    <div *ngIf="steps == 1">
+        <app-course-information></app-course-information>
+    </div>
+
+    <div *ngIf="steps == 2">
+        <app-student-information></app-student-information>
+    </div>
+<!-- 
+    <div *ngIf="steps == 3">
+        <app-documents-upload></app-documents-upload>
+    </div> -->
+</div>

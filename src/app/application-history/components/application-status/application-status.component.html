@@ -1,0 +1,20 @@
+<div class="bg-white border-2 rounded-sm py-5">
+  <div *ngIf="loading" class="animate-pulse h-2 bg-slate-200 rounded-full my-3 mx-5"></div>
+  <div *ngIf="loading" class="animate-pulse h-2 bg-slate-200 rounded-full my-3 mx-5"></div>
+  <div class="flex flex-wrap" *ngIf="!loading">
+    <div *ngFor="let applicationStatus of applicationStatuses" class="flex">
+      <button (click)="updateStatus(applicationStatus)">
+          <div class="flex mx-2">
+              <svg *ngIf="applicationStatus.pivot.status==1" xmlns="http://www.w3.org/2000/svg" class="self-center h-5 w-5 stroke-green-700" fill="none"
+                viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+              </svg>
+              <svg *ngIf="applicationStatus.pivot.status==0" xmlns="http://www.w3.org/2000/svg" class="self-center h-5 w-5 stroke-red-700" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M6 18L18 6M6 6l12 12" />
+              </svg>
+              <span>{{applicationStatus.name}}</span>
+          </div>
+      </button>
+    </div>
+  </div>
+</div>

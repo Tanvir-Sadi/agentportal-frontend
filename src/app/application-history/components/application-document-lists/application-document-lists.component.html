@@ -1,0 +1,121 @@
+<div class="bg-white mt-2 border-2 rounded-sm p-5"> 
+    <h3 class="font-medium text-blue-900 border-b-2">Academic Documents</h3>
+    <p *ngIf="documents.academic.length == 0" class="text-red-600 my-2">No File Uploaded Yet</p>
+    <ul *ngFor="let academic of documents.academic" class="ml-2">
+        <li class="my-2">{{academic.file_name}}
+            <svg (click)="downloadMedia(academic)" xmlns="http://www.w3.org/2000/svg" class="inline h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+        </li>
+    </ul>
+
+    <h3 class="font-medium text-blue-900 border-b-2">CV / Resume</h3>
+    <p *ngIf="documents.cv.length == 0" class="text-red-600 my-2">No File Uploaded Yet</p>
+    <ul *ngFor="let cv of documents.cv" class="ml-2">
+        <li class="my-2">{{cv.file_name}}
+            <svg (click)="downloadMedia(cv)" xmlns="http://www.w3.org/2000/svg" class="inline h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+        </li>
+    </ul>
+
+    <h3 class="font-medium text-blue-900 border-b-2">Recomendation Letter</h3>
+    <p *ngIf="documents.recomendation.length == 0" class="text-red-600 my-2">No File Uploaded Yet</p>
+    <ul *ngFor="let recomendation of documents.recomendation" class="ml-2">
+        <li class="my-2">{{recomendation.file_name}}
+            <svg (click)="downloadMedia(recomendation)" xmlns="http://www.w3.org/2000/svg" class="inline h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+        </li>
+    </ul>
+
+    <h3 class="font-medium text-blue-900 border-b-2">Refference</h3>
+    <p *ngIf="documents.refference.length == 0" class="text-red-600 my-2">No File Uploaded Yet</p>
+    <ul *ngFor="let refference of documents.refference" class="ml-2">
+        <li class="my-2">{{refference.file_name}}
+            <svg (click)="downloadMedia(refference)" xmlns="http://www.w3.org/2000/svg" class="inline h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+        </li>
+    </ul>
+
+    <h3 class="font-medium text-blue-900 border-b-2">English Requirements</h3>
+    <p *ngIf="documents.english.length == 0" class="text-red-600 my-2">No File Uploaded Yet</p>
+    <ul *ngFor="let english of documents.english" class="ml-2">
+        <li class="my-2">{{english.file_name}}
+            <svg (click)="downloadMedia(english)" xmlns="http://www.w3.org/2000/svg" class="inline h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+        </li>
+    </ul>
+
+    <h3 class="font-medium text-blue-900 border-b-2">Work Experience</h3>
+    <p *ngIf="documents.work.length == 0" class="text-red-600 my-2">No File Uploaded Yet</p>
+    <ul *ngFor="let work of documents.work" class="ml-2">
+        <li class="my-2">{{work.file_name}}
+            <svg (click)="downloadMedia(work)" xmlns="http://www.w3.org/2000/svg" class="inline h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+        </li>
+    </ul>
+
+    <h3 class="font-medium text-blue-900 border-b-2">Passport</h3>
+    <p *ngIf="documents.passport.length == 0" class="text-red-600 my-2">No File Uploaded Yet</p>
+    <ul *ngFor="let passport of documents.passport" class="ml-2">
+        <li class="my-2">{{passport.file_name}}
+            <svg (click)="downloadMedia(passport)" xmlns="http://www.w3.org/2000/svg" class="inline h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+        </li>
+    </ul>
+
+    <h3 class="font-medium text-blue-900 border-b-2">VISA</h3>
+    <p *ngIf="documents.visa.length == 0" class="text-red-600 my-2">No File Uploaded Yet</p>
+    <ul *ngFor="let visa of documents.visa" class="ml-2">
+        <li class="my-2">{{visa.file_name}}
+            <svg (click)="downloadMedia(visa)" xmlns="http://www.w3.org/2000/svg" class="inline h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+        </li>
+    </ul>
+
+    <h3 class="font-medium text-blue-900 border-b-2">Statement of Purpose (SoP)</h3>
+    <p *ngIf="documents.sop.length == 0" class="text-red-600 my-2">No File Uploaded Yet</p>
+    <ul *ngFor="let sop of documents.sop" class="ml-2">
+        <li class="my-2">{{sop.file_name}}
+            <svg (click)="downloadMedia(sop)" xmlns="http://www.w3.org/2000/svg" class="inline h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+        </li>
+    </ul>
+
+    <h3 class="font-medium text-blue-900 border-b-2">Conditional Offer Letter</h3>
+    <p *ngIf="documents.conditional.length == 0" class="text-red-600 my-2">No File Uploaded Yet</p>
+    <ul *ngFor="let conditional of documents.conditional" class="ml-2">
+        <li class="my-2">{{conditional.file_name}}
+            <svg (click)="downloadMedia(conditional)" xmlns="http://www.w3.org/2000/svg" class="inline h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+        </li>
+    </ul>
+
+    <h3 class="font-medium text-blue-900 border-b-2">Unconditional Offer Letter</h3>
+    <p *ngIf="documents.unconditional.length == 0" class="text-red-600 my-2">No File Uploaded Yet</p>
+    <ul *ngFor="let unconditional of documents.unconditional" class="ml-2">
+        <li class="my-2">{{unconditional.file_name}}
+            <svg (click)="downloadMedia(unconditional)" xmlns="http://www.w3.org/2000/svg" class="inline h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+        </li>
+    </ul>
+
+    <h3 class="font-medium text-blue-900 border-b-2">Other Files</h3>
+    <p *ngIf="documents.other.length == 0" class="text-red-600 my-2">No File Uploaded Yet</p>
+    <ul *ngFor="let other of documents.other" class="ml-2">
+        <li class="my-2">{{other.file_name}}
+            <svg (click)="downloadMedia(other)" xmlns="http://www.w3.org/2000/svg" class="inline h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+              </svg>
+        </li>
+    </ul>
+</div>
