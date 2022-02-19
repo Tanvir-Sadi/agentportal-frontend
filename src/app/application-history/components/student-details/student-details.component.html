@@ -22,7 +22,7 @@
 
     <p class="col-span-1 font-semibold">Student has any Visa Refusal:</p>
     <div *ngIf="loading" class="animate-pulse h-2 bg-slate-200 rounded-full col-span-3 mr-10"></div>
-    <p *ngIf="!loading" class="col-span-3">{{application?.visa_refusal ? 'Yes':'No'}}</p>
+    <p *ngIf="!loading" class="col-span-3">{{application?.visa_refusal == "1"? 'Yes':'No'}}</p>
 
     <p class="col-span-1 font-semibold"> Passport Number: </p>
     <div *ngIf="loading" class="animate-pulse h-2 bg-slate-200 rounded-full col-span-3 mr-10"></div>

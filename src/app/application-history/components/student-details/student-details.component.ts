@@ -30,6 +30,8 @@ export class StudentDetailsComponent implements OnInit {
         (param) => {
           if (param.body) {
             this.loading = false;
+            console.log(param.body);
+            
             this.application = param.body;
           }
         },

@@ -43,17 +43,18 @@ export class MessegeDetailsComponent implements OnInit {
   
 
   addmessage(){
-    if (this.messages.status == 'VALID') {
-      this._applicationService.addMessage(this.messages.value, this.id).subscribe(
-        (param)=>{
-          this.messagelist()
-        },
-        (error)=>{
-        }
-      )        
-    } else {
-      alert("Please fill out all the field!")
-    }
+    // if(this.messages.)
+    this._applicationService.addMessage(this.messages.value, this.id).subscribe(
+      (param)=>{
+        this.messagelist()
+      },
+      (error)=>{
+      }
+    )        
+    // if (this.messages.status == 'VALID') {
+    // } else {
+    //   alert("Please fill out all the field!")
+    // }
   }
 
 }

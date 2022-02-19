@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder } from '@angular/forms';
+import { UniversityService } from '../../services/university.service';
 
 @Component({
   selector: 'app-add-university',
@@ -8,12 +10,34 @@ import { Component, OnInit } from '@angular/core';
 export class AddUniversityComponent implements OnInit {
 
   hiddenAddUniversity:boolean = false; 
-  constructor() { }
+  constructor(private fb:FormBuilder, private _universityService:UniversityService) { }
+
+  university = this.fb.group({
+    name:[''],
+    address:[''],
+    link:[''],
+    tuitionfees:['']
+  });
 
   ngOnInit(): void {
   }
 
   toggleAddUniversity(){
     this.hiddenAddUniversity = !this.hiddenAddUniversity; 
+  }
+
+  onSubmit(){
+    this.addUniversity()
+  }
+
+  addUniversity(){
+    this._universityService.addUniversity(this.university.value)
+    .subscribe(
+      (data)=>{
+        console.log(data)
+        this.toggleAddUniversity()
+        this.university.reset()
+      }
+    )
   }
 }

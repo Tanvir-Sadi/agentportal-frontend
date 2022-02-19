@@ -40,6 +40,8 @@ export class ApplicationFilterComponent implements OnInit {
     if (this.roles=='admin') {
       params = params.set(`filter[user.name]`,this.applicationFilter.controls['user_name'].value)    
     }   
+    // console.log(params);
+    
     this._applicationService.getApplicationFilter(params)
   }
 }

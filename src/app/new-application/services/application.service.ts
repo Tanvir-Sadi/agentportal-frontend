@@ -135,6 +135,10 @@ export class ApplicationService {
   }
 
   addMessage(message:any, id:any){
+    if(message.message==''){
+      message.message ='N/A'
+    }
+
     return this._http.post<any>(`${this.API_URL}/application/${id}/message`,message)
     .pipe(
       tap(() => {

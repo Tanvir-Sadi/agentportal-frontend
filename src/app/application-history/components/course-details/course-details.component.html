@@ -11,6 +11,10 @@
         <p class="col-span-1 block mb-1 font-semibold"> Course Level: </p>
         <div *ngIf="loading" class="animate-pulse h-2 bg-slate-200 rounded-full col-span-3 mr-10"></div>
         <a *ngIf="!loading" class="col-span-3 block mb-1">{{application.course_level}}</a>
+        
+        <p class="col-span-1 block mb-1 font-semibold"> Course Intake: </p>
+        <div *ngIf="loading" class="animate-pulse h-2 bg-slate-200 rounded-full col-span-3 mr-10"></div>
+        <a *ngIf="!loading" class="col-span-3 block mb-1">{{application.course_intake}}</a>
     </div>
 </div>
   
